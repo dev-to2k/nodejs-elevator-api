@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // Xuất ra ES6 (ES2015)
+    "module": "CommonJS", // Sử dụng module CommonJS
+    "outDir": "./dist", // Thư mục chứa các file biên dịch
+    "rootDir": "./src", // Thư mục chứa mã nguồn của bạn (bạn có thể thay đổi nếu để trong src)
+    "strict": true, // Bật chế độ kiểm tra nghiêm ngặt
+    "esModuleInterop": true, // Cho phép import module ES một cách dễ dàng
+    "skipLibCheck": true, // Bỏ qua kiểm tra kiểu của thư viện
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}
