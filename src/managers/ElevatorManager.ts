@@ -1,7 +1,7 @@
 import { Direction } from "../enums";
 import { Elevator } from "../models/Elevator";
 import { Request } from "../models/Request";
-import { wsServer } from "../websocket";
+import { io } from "../websocket";
 
 export class ElevatorManager {
   public elevators: Elevator[] = [];
@@ -103,11 +103,7 @@ export class ElevatorManager {
       doorOpen: elevator.doorOpen,
       targets: elevator.targetFloors,
     }));
-    const message = JSON.stringify({ type: "STATUS_UPDATE", data: status });
-    wsServer.connections.forEach((conn) => {
-      if (conn.connected) {
-        conn.sendUTF(message);
-      }
-    });
+
+    io.emit("STATUS_UPDATE", status);
   }
 }

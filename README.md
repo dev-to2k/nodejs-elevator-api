@@ -6,7 +6,7 @@ Dự án **NodeJS Elevator API** là một hệ thống quản lý thang máy đ
 
 - **Quản lý trạng thái thang máy**: Theo dõi vị trí hiện tại, hướng di chuyển và trạng thái cửa.
 - **Xử lý yêu cầu gọi thang máy**: Hỗ trợ yêu cầu gọi thang từ người dùng và xử lý chọn tầng.
-- **Cập nhật trạng thái thang máy tự động**: Sử dụng **WebSocket** để gửi thông báo thời gian thực.
+- **Cập nhật trạng thái thang máy tự động**: Sử dụng **Socket.io** để gửi thông báo thời gian thực.
 
 ## Công nghệ sử dụng
 
@@ -14,7 +14,7 @@ Dự án **NodeJS Elevator API** là một hệ thống quản lý thang máy đ
 - **Express.js** - Framework web cho Node.js
 - **TypeScript** - Viết code có kiểm tra kiểu tĩnh
 - **MySQL** - Hệ quản trị cơ sở dữ liệu
-- **WebSocket** - Xử lý cập nhật trạng thái thang máy theo thời gian thực
+- **Socket.io** - Xử lý cập nhật trạng thái thang máy theo thời gian thực
 - **Jest** - Testing framework
 
 ## Cấu trúc dự án
@@ -47,7 +47,7 @@ nodejs-elevator-api/
 │   │   └── ElevatorManager.test.ts # Unit test cho ElevatorManager
 │   ├── validates/
 │   │   └── index.ts                # Validate request từ API
-│   └── websocket.ts                # Cấu hình WebSocket server
+│   └── websocket.ts                # Cấu hình Socket.io server
 ```
 
 ## Cài đặt và chạy dự án

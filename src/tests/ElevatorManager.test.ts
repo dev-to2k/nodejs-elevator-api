@@ -4,7 +4,7 @@ import { ElevatorManager } from "../managers/ElevatorManager";
 import { Request } from "../models/Request";
 
 jest.mock("../websocket", () => ({
-  wsServer: {
+  io: {
     connections: [],
   },
 }));
